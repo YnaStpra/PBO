@@ -1,29 +1,23 @@
 public abstract class Entity {
-    protected String name;
-    protected int health;
-    protected int attack;
-    protected int defence;
-    protected static int count;
 
-    public Entity(String name, int health, int attack, int defence) {
+    String name;
+    int health = 80;
+    int attack = 20;
+    int defense = 10;
+
+    public Entity(String name, int health, int attack, int defense) {
         this.name = name;
         this.health = health;
         this.attack = attack;
-        this.defence = defence;
-        count++;
+        this.defense = defense;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName() {
-        return this.name;
-    }
+    abstract void showEntityInfo();
 
-    public abstract void showEntity();
+
+
 }
-
-
-
-
-
